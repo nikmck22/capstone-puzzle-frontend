@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="index">
     <!-- <h1>{{ message }}</h1> -->
     <div v-bind:key="puzzle.id" v-for="puzzle in puzzles">
       <p>Id# {{puzzle.id}}</p>

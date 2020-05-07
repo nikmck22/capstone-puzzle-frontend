@@ -33,3 +33,29 @@
   color: #42b983;
 }
 </style>
+
+<script>
+export default {
+  data: function() {
+    return {
+      titleFilter: ""
+    };
+  },
+
+  methods: {
+    isLoggedIn: function() {
+      console.log('user is logged in');
+      if (localStorage.getItem("jwt")) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+
+    getUserId: function() {
+      return parseInt(localStorage.getItem("user_id"));
+    }
+  }
+};
+
+</script>
