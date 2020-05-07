@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Login from '../views/Login.vue';
 import Logout from '../views/Logout.vue';
+import Index from '../views/Index.vue';
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ Vue.use(VueRouter)
     path: '/logout',
     name: 'logout',
     component: Logout
+  },
+  {
+    path: '/index',
+    name: 'index',
+    component: Index
   },
   {
     path: '/about',
