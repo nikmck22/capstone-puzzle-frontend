@@ -1,6 +1,8 @@
 <template>
   <div class="logout">
-    <p>You have now been logged out</p>
+    <div class="container">
+      <p>You have now been logged out</p>
+    </div>
   </div>
 </template>
 
@@ -11,7 +13,7 @@ export default {
   created: function() {
     delete axios.defaults.headers.common["Authorization"];
     localStorage.removeItem("jwt");
-    this.$router.push("/");
+    // this.$router.push("/");
   }
 };
 
