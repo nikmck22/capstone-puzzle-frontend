@@ -2,7 +2,6 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/index">Puzzles</router-link> |
       <router-link to="/login">Login</router-link> |
       <router-link to="/logout">Logout</router-link>
 
@@ -52,8 +51,16 @@ export default {
       }
     },
 
+    isCurrentUser: function() {
+      return parseInt(localStorage.getItem("user_id"));
+    },
+
     getUserId: function() {
       return parseInt(localStorage.getItem("user_id"));
+    },
+
+    getPuzzleId: function() {
+      return parseInt(localStorage.getItem("puzzle_id"));
     }
   }
 };

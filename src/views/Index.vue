@@ -11,6 +11,9 @@
       <p>{{puzzle.description}}</p>
       <img v-bind:src="puzzle.img_url">
       <hr>
+  
+      <a v-if="puzzle.id === $parent.getPuzzleId()" v-bind:href="`/puzzles/${puzzle.id}`">Rate this Puzzle</a>
+      <!-- FOR RATINGS -->
     </div>
   </div>
 </template>

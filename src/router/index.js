@@ -4,6 +4,7 @@ import Home from '../views/Home.vue';
 import Login from '../views/Login.vue';
 import Logout from '../views/Logout.vue';
 import Index from '../views/Index.vue';
+import Show from '../views/Show.vue';
 
 Vue.use(VueRouter)
 
@@ -24,9 +25,14 @@ Vue.use(VueRouter)
     component: Logout
   },
   {
-    path: '/index',
+    path: '/',
     name: 'index',
     component: Index
+  },
+  {
+    path: '/puzzles/:id',
+    name: 'show',
+    component: Show
   },
   {
     path: '/about',
