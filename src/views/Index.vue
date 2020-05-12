@@ -14,8 +14,7 @@
 
       <router-link v-bind:to="`/puzzles/${puzzle.id}`">More details</router-link>
   
-      <!-- <a v-if="puzzle.id === $parent.getPuzzleId()" v-bind:href="`/puzzles/${puzzle.id}`">Rate this Puzzle</a> -->
-      <!-- FOR RATINGS -->
+     
     <!-- </div> -->
 			<!-- Features -->
 				<div id="features-wrapper">

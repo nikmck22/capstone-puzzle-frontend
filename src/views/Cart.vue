@@ -2,9 +2,7 @@
   <div class="carted_puzzles">
     <!-- <h1>{{ message }}</h1> -->
     <div v-bind:key="carted_puzzle.id" v-for="carted_puzzle in carted_puzzles">
-      <p>Id# {{carted_puzzle.id}}</p>
-      <!-- <p>{{puzzle.name}}</p> -->
-  
+        <p>Id#: {{carted_puzzle.id}} - PuzzleId: {{ carted_puzzle.puzzle_id }} {{ carted_puzzle.puzzle }}</p>
     </div>
   </div>
 </template>
@@ -18,7 +16,7 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      carted_puzzles: []
+      carted_puzzles: [],
     };
   },
   created: function() {
@@ -28,6 +26,11 @@ export default {
       console.log(response.data);
     });
   },
+
+  // var getPuzzleInfo = function() {
+  //   return 
+  // };
+
   methods: {}
 };
 </script>

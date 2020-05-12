@@ -152,9 +152,11 @@ export default {
       return parseInt(localStorage.getItem("user_id"));
     },
 
-    getPuzzleId: function() {
+    getPuzzleInfo: function() {
       return parseInt(localStorage.getItem("puzzle_id"));
     },
+
+
 
     addToCart: function() {
       console.log('puzzle has been added to cart')

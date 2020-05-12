@@ -12,7 +12,6 @@
       <router-link v-bind:to="`/puzzles/${puzzle.id}`">Add to Cart</router-link>
       <button v-on:click="`/puzzles/${puzzle.id}`">More details</button>
 
-      <!-- <a v-if="puzzle.puzzle_id === $parent.getPuzzleId()" v-bind:href="`/puzzles/${puzzle.id}`">Rate this Puzzle </a> -->
 
       <hr>
   </div>
