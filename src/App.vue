@@ -9,8 +9,8 @@
         <!-- Nav -->
           <nav id="nav">
             <ul>
-              <li class="current"><a href="/">Welcome</a></li>
-              <li>
+              <li class="current"><a href="/">Home</a></li>
+              <!-- <li>
                 <a href="#">Menu</a>
                 <ul>
                   <li><a href="/login">Login</a></li>
@@ -26,10 +26,10 @@
                   </li>
                   <li><a href="#">Veroeros feugiat</a></li>
                 </ul>
-              </li>
-              <!-- <li><a href="/left-sidebar.html">Left Sidebar</a></li>
+              </li> -->
+              <li><router-link to="/carted_puzzles">Cart</router-link></li>
               <li><a href="/right-sidebar.html">Right Sidebar</a></li>
-              <li><a href="/no-sidebar.html">No Sidebar</a></li> -->
+              <li><a href="/no-sidebar.html">No Sidebar</a></li>
             </ul>
           </nav>
 

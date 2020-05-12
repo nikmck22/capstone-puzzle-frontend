@@ -26,7 +26,7 @@ Vue.use(VueRouter)
     component: Logout
   },
   {
-    path: '/',
+    path: '/puzzles',
     name: 'index',
     component: Index
   },

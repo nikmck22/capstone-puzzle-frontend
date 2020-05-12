@@ -1,7 +1,11 @@
 <template>
-  <div class="cart">
-    <h1>{{ message }}</h1>
-    <h1>{{ info }}</h1>
+  <div class="carted_puzzles">
+    <!-- <h1>{{ message }}</h1> -->
+    <div v-bind:key="carted_puzzle.id" v-for="carted_puzzle in carted_puzzles">
+      <p>Id# {{carted_puzzle.id}}</p>
+      <!-- <p>{{puzzle.name}}</p> -->
+  
+    </div>
   </div>
 </template>
 
@@ -14,24 +18,16 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      message: "Welcome to Vue.js!",
-      info: ""
+      carted_puzzles: []
     };
   },
-
-  // mounted() {
-  //   axios
-  //     .get('/api/carted_puzzles')
-  //     .then(response => (this.info = response));
-  // },
-
   created: function() {
     axios.get("/api/carted_puzzles").then(response => {
-      // this.puzzle = response.data;
+      console.log('here are your carted puzzles');
+      this.carted_puzzles = response.data;
       console.log(response.data);
     });
   },
-
   methods: {}
 };
 </script>
