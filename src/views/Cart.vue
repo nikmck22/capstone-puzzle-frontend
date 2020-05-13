@@ -3,6 +3,7 @@
     <!-- <h1>{{ message }}</h1> -->
     <div v-bind:key="carted_puzzle.id" v-for="carted_puzzle in carted_puzzles">
         <p>Id#: {{carted_puzzle.id}} - PuzzleId: {{ carted_puzzle.puzzle_id }} {{ carted_puzzle.puzzle }}</p>
+        <button v-on:click="removeFromCart()">Remove from Cart</button>
     </div>
   </div>
 </template>
@@ -31,6 +32,18 @@ export default {
   //   return 
   // };
 
-  methods: {}
+  methods: {
+    removeFromCart: function() {
+      // var params = {
+      //   puzzle_id: this.puzzle.id,
+      //   status: "removed"
+      // };
+      console.log('puzzle removed from cart');
+      axios.delete(`/api/carted_puzzles/${this.carted_puzzle.id}`).then(response => {
+        console.log(response.data);
+      });
+
+    }
+  }
 };
 </script>

@@ -12,6 +12,7 @@
       <br>
       <!-- <router-link v-bind:to="`/puzzles/${puzzle.id}`">Add to Cart</router-link> -->
       <button v-on:click="addToCart()">Add to Cart</button>
+      
 
 
       <hr>
@@ -49,7 +50,7 @@ export default {
         console.log(response.data);
       });
 
-    }
+    },
   }
 };
 </script>
