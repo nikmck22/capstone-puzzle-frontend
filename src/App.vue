@@ -16,10 +16,10 @@
                   <li><a href="/login">Login</a></li>
                   <li><a href="/logout">Logout</a></li>
                   <li>
-                    <a href="#">Phasellus consequat</a>
+                    <a href="/login">Phasellus consequat</a>
                     <ul>
-                      <li><a href="#">Lorem ipsum dolor</a></li>
-                      <li><a href="#">Phasellus consequat</a></li>
+                      <li><a href="/logout">Lorem ipsum dolor</a></li>
+                      <li><a href="/login">Phasellus consequat</a></li>
                       <li><a href="#">Magna phasellus</a></li>
                       <li><a href="#">Etiam dolore nisl</a></li>
                     </ul>
@@ -28,8 +28,8 @@
                 </ul>
               </li> -->
               <li><router-link to="/carted_puzzles">Cart</router-link></li>
-              <li><a href="/right-sidebar.html">Right Sidebar</a></li>
-              <li><a href="/no-sidebar.html">No Sidebar</a></li>
+              <li><a href="/login">Login</a></li>
+              <li><a href="/logout">Logout</a></li>
             </ul>
           </nav>
 
@@ -37,6 +37,8 @@
     </div>
 
       <router-view/>
+      <!-- STAR RATINGS -->
+    <Rating :grade="3" :maxStars="5" :hasCounter="true" />
 
     <div id="footer-wrapper">
       <footer id="footer" class="container">
@@ -123,11 +125,12 @@
 </template>
 
 <style>
+/* @import '/styles/global.scss'; */
 
 </style>
 
 <script>
-// import Rating from './components/Rating';
+import Rating from './components/Rating.vue';
 
 
 export default {
@@ -135,6 +138,14 @@ export default {
     return {
       titleFilter: ""
     };
+  },
+
+  name: 'App',
+  components: {
+    Rating
+  },
+  beforeCreate: function() {
+    document.body.className = 'home';
   },
 
   methods: {
@@ -158,8 +169,6 @@ export default {
     getPuzzleInfo: function() {
       return parseInt(localStorage.getItem("puzzle_id"));
     },
-
-
 
     addToCart: function() {
       console.log('puzzle has been added to cart')
