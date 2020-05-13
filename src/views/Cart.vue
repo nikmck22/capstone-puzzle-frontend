@@ -35,11 +35,11 @@ export default {
   methods: {
     removeFromCart: function() {
       // var params = {
-      //   puzzle_id: this.puzzle.id,
-      //   status: "removed"
+      //   carted_puzzle_id: this.carted_puzzle.id,
+      //   // status: "removed"
       // };
       console.log('puzzle removed from cart');
-      axios.delete(`/api/carted_puzzles/${this.carted_puzzle.id}`).then(response => {
+      axios.delete(`/api/carted_puzzles/${this.$route.params.id}`).then(response => {
         console.log(response.data);
       });
 
@@ -47,3 +47,6 @@ export default {
   }
 };
 </script>
+
+
+<!-- TRIED - $routes.params.id and this.carted_puzzle.id -->
