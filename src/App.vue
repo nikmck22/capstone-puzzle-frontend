@@ -127,6 +127,9 @@
 </style>
 
 <script>
+// import Rating from './components/Rating';
+
+
 export default {
   data: function() {
     return {
