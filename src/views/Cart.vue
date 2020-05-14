@@ -1,13 +1,13 @@
 <template>
   <div class="carted_puzzles">
     <!-- <h1>{{ message }}</h1> -->
-    <div v-bind:key="carted_puzzle.id" v-for="carted_puzzle in carted_puzzles" v-if="carted_puzzle.status === 'carted'">
+    <div v-bind:key="carted_puzzle.id" v-for="carted_puzzle in carted_puzzles">
         <p>Id#: {{carted_puzzle.id}} - PuzzleId: {{ carted_puzzle.puzzle_id }} {{ carted_puzzle.puzzle }}</p>
-        <button v-on:click="removeFromCart(this.carted_puzzle)">Remove from Cart</button>
+        <button v-on:click="removeFromCart(carted_puzzle.id)">Remove from Cart</button>
     </div>
-    <div v-else-if="carted_puzzle.status !== 'carted'">
+    <!-- <div v-else-if="">
       <p>There are no puzzles in your cart</p>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -41,7 +41,15 @@ export default {
         console.log('puzzle removed from cart');
         console.log(response.data);
       });
-    }
+    },
+
+    // emptyCart: function() {
+    //   axios.get("/api/carted_puzzles").then(response => {
+    //     if (response.data === 'true') {
+    //       console.log('NO PUZZLES');
+    //     }
+    //   });
+    // }
   }
 };
 </script>

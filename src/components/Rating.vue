@@ -25,6 +25,7 @@ export default {
     rate(star) {
       if (typeof star === 'number' && star <= this.maxStars && star >= 0) {
         this.stars = this.stars === star ? star - 1 : star
+        this.$emit("selectStars", this.stars);
       }
     }
   },

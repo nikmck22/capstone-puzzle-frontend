@@ -1,20 +1,27 @@
 <template>
   <div class="show">
     <!-- <h1>{{ message }}</h1> -->
-      <h4>Id# {{puzzle.id}}</h4>
-      <img v-bind:src="puzzle.img_url">
-      <h3>{{ puzzle.name }}</h3>
-      <p>{{puzzle.rating_id}}</p>
-      <p>{{puzzle.format}}</p>
-      <p>{{puzzle.pieces}}</p>
-      <p>{{puzzle.category}}</p>
-      <p>{{puzzle.description}}</p>
-      <p>{{puzzle.rating_number}}</p>
-      <!-- <Rating :grade="3" :maxStars="5" :hasCounter="true" /> -->
-
+    <h4>Id# {{puzzle.id}}</h4>
+    <img v-bind:src="puzzle.img_url">
+    <h3>{{ puzzle.name }}</h3>
+    <p>{{puzzle.rating_id}}</p>
+    <p>{{puzzle.format}}</p>
+    <p>{{puzzle.pieces}}</p>
+    <p>{{puzzle.category}}</p>
+    <p>{{puzzle.description}}</p>
+    <p>{{puzzle.rating_number}}</p>
+    <button v-on:click="addToCart()">Add to Cart</button>
+      <Rating :grade="theRating" :maxStars="5" :hasCounter="true" v-on:selectStars="selectStars" />
+      <!-- <form v-on:submit.prevent="submit()">
+        <div>
+          <label>Rate this Puzzle:</label>
+          <input type="text" class="form-control" v-model="puzzle.rating_number">
+        </div>
+          <input type="submit" class="btn btn-primary" value="Submit">
+      </form> -->
       <br>
       <!-- <router-link v-bind:to="`/puzzles/${puzzle.id}`">Add to Cart</router-link> -->
-      <button v-on:click="addToCart()">Add to Cart</button>
+      
 
 <!--RATING-->
   <!-- <div class="rating">
@@ -40,13 +47,14 @@
 
 <script>
 import axios from "axios";
-// import Rating from '../components/Rating.vue';
+import Rating from '../components/Rating.vue';
 
 
 export default {
   data: function() {
     return {
-      puzzle: {}
+      puzzle: {},
+      theRating: 2
     };
   },
   created: function() {
@@ -56,10 +64,10 @@ export default {
     });
   },
 
-  // name: 'App',
-  // components: {
-  //   Rating
-  // },
+  name: 'App',
+  components: {
+    Rating
+  },
 
   // name: 'Rating',
   // props: ['grade', 'maxStars', 'hasCounter'],
@@ -79,9 +87,9 @@ export default {
         status: "carted"
       };
       console.log('puzzle added to cart');
-      axios.post("/api/carted_puzzles", params).then(response => {
-        console.log(response.data);
-      });
+      // axios.post("/api/carted_puzzles", params).then(response => {
+      //   console.log(response.data);
+      // });
 
     },
 
@@ -90,6 +98,19 @@ export default {
         console.log(response.data);
       });
     },
+
+    selectStars: function(stars) {
+      this.puzzle.rating_number = stars;
+    }
+
+    // submit: function() {
+    //   var params = {
+    //     rating_number: this.puzzle.rating_number
+    //   };
+    //   axios.patch(`/api/puzzles/${this.puzzle.id}`, params).then(response => {
+    //     console.log(response.data);
+    //   });
+    // }
     
     // rate(star) {
     //   if (typeof star === 'number' && star <= this.maxStars && star >= 0) {

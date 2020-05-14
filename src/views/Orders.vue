@@ -1,7 +1,7 @@
 <template>
   <div class="orders">
     <!-- <h1>{{ message }}</h1> -->
-    <div v-bind:key="orders.id" v-for="order in orders">
+    <div v-bind:key="order.id" v-for="order in orders">
         <p>Id#: {{order.id}}</p>
     </div>
   </div>

@@ -39,7 +39,7 @@
 
       <router-view/>
       <!-- STAR RATINGS -->
-    <Rating :grade="3" :maxStars="5" :hasCounter="true" />
+    <!-- <Rating :grade="3" :maxStars="5" :hasCounter="true" /> -->
 
     <div id="footer-wrapper">
       <footer id="footer" class="container">
@@ -141,10 +141,10 @@ export default {
     };
   },
 
-  name: 'App',
-  components: {
-    Rating
-  },
+  // name: 'App',
+  // components: {
+  //   Rating
+  // },
 
   beforeCreate: function() {
     document.body.className = 'home';
