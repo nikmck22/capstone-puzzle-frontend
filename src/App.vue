@@ -28,6 +28,7 @@
                 </ul>
               </li> -->
               <li><router-link to="/carted_puzzles">Cart</router-link></li>
+              <li><router-link to="/orders">My Orders</router-link></li>
               <li><a href="/login">Login</a></li>
               <li><a href="/logout">Logout</a></li>
             </ul>
@@ -125,7 +126,7 @@
 </template>
 
 <style>
-/* @import '/styles/global.scss'; */
+@import '/styles/global.scss';
 
 </style>
 
@@ -144,6 +145,7 @@ export default {
   components: {
     Rating
   },
+
   beforeCreate: function() {
     document.body.className = 'home';
   },
@@ -171,7 +173,7 @@ export default {
     },
 
     addToCart: function() {
-      console.log('puzzle has been added to cart')
+      console.log('puzzle has been added to cart');
     }
   }
 };

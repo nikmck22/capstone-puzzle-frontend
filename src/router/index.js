@@ -6,6 +6,7 @@ import Logout from '../views/Logout.vue';
 import Index from '../views/Index.vue';
 import Show from '../views/Show.vue';
 import Cart from '../views/Cart.vue';
+import Orders from '../views/Orders.vue';
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,11 @@ Vue.use(VueRouter)
     path: '/carted_puzzles',
     name: 'cart',
     component: Cart
+  },
+  {
+    path: '/orders',
+    name: 'orders',
+    component: Orders
   },
   {
     path: '/about',

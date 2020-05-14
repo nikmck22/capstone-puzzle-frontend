@@ -9,10 +9,26 @@
       <p>{{puzzle.pieces}}</p>
       <p>{{puzzle.category}}</p>
       <p>{{puzzle.description}}</p>
+      <p>{{puzzle.rating_number}}</p>
+      <!-- <Rating :grade="3" :maxStars="5" :hasCounter="true" /> -->
+
       <br>
       <!-- <router-link v-bind:to="`/puzzles/${puzzle.id}`">Add to Cart</router-link> -->
       <button v-on:click="addToCart()">Add to Cart</button>
-      
+
+<!--RATING-->
+  <!-- <div class="rating">
+    <ul class="list">
+      <li @click="rate(star)" v-for="star in maxStars" :class="{ 'active': star <= stars }" :key="star.stars" class="star">
+      <i :class="star <= stars ? 'fas fa-star' : 'far fa-star'"></i> 
+      </li>
+    </ul>
+    <div v-if="hasCounter" class="info counter">
+      <span class="score-rating">{{ stars }}</span>
+      <span class="divider">/</span>
+      <span class="score-max">{{ maxStars }}</span>
+    </div>
+  </div> -->
 
 
       <hr>
@@ -24,6 +40,8 @@
 
 <script>
 import axios from "axios";
+// import Rating from '../components/Rating.vue';
+
 
 export default {
   data: function() {
@@ -37,8 +55,23 @@ export default {
       console.log(response.data);
     });
   },
-  methods: {
 
+  // name: 'App',
+  // components: {
+  //   Rating
+  // },
+
+  // name: 'Rating',
+  // props: ['grade', 'maxStars', 'hasCounter'],
+
+  // data() {
+  //   return {
+  //     stars: this.grade
+  //   };
+  // },
+
+
+  methods: {
 
     addToCart: function() {
       var params = {
@@ -51,6 +84,18 @@ export default {
       });
 
     },
+
+    ratePuzzle: function() {
+      axios.post("/api/puzzle_ratings").then(response => {
+        console.log(response.data);
+      });
+    },
+    
+    // rate(star) {
+    //   if (typeof star === 'number' && star <= this.maxStars && star >= 0) {
+    //     this.stars = this.stars === star ? star - 1 : star
+    //   }
+    // }
   }
 };
 </script>
