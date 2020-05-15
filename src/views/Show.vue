@@ -89,6 +89,7 @@ export default {
       console.log('puzzle added to cart');
       axios.post("/api/carted_puzzles", params).then(response => {
         console.log(response.data);
+        this.$router.push('/carted_puzzles');
       });
 
     },

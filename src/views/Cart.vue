@@ -52,6 +52,7 @@ export default {
       axios.post("/api/orders").then(response => {
         console.log('puzzle order complete');
         console.log(response.data);
+        this.$router.push('/orders');
       });
     },
  
