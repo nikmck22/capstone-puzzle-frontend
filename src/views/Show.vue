@@ -87,9 +87,9 @@ export default {
         status: "carted"
       };
       console.log('puzzle added to cart');
-      // axios.post("/api/carted_puzzles", params).then(response => {
-      //   console.log(response.data);
-      // });
+      axios.post("/api/carted_puzzles", params).then(response => {
+        console.log(response.data);
+      });
 
     },
 
