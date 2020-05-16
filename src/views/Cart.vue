@@ -25,7 +25,7 @@ export default {
   data: function() {
     return {
       carted_puzzles: [],
-      currentCartedPuzzle: {}
+      currentCartedPuzzle: {},
     };
   },
   created: function() {
@@ -37,19 +37,23 @@ export default {
   },
 
   // var getPuzzleInfo = function() {
-  //   return 
+    //   return 
   // };
 
   methods: {
-
+    
     // cartInfo: function(CartedPuzzle) {
-    //   this.currentCartedPuzzle = CartedPuzzle;
+      //   this.currentCartedPuzzle = CartedPuzzle;
     // },
 
-    orderPuzzle: function(carted_puzzle) {      
+    orderPuzzle: function(carted_puzzle) {     
+      var params = {
+        puzzle_id: carted_puzzle.puzzle.id
+      };
       console.log('trying to order');
-      console.log(carted_puzzle);
-      axios.post("/api/orders").then(response => {
+      // console.log(carted_puzzle);
+      console.log(carted_puzzle.puzzle.id)
+      axios.post("/api/orders", params).then(response => {
         console.log('puzzle order complete');
         console.log(response.data);
         this.$router.push('/orders');
@@ -64,6 +68,16 @@ export default {
         console.log(response.data);
       });
     },
+    // addToCart: function() {
+    //   var params = {
+    //     puzzle_id: this.puzzle.id,
+    //     status: "carted"
+    //   };
+    //   console.log('puzzle added to cart');
+    //   axios.post("/api/carted_puzzles", params).then(response => {
+    //     console.log(response.data);
+    //     this.$router.push('/carted_puzzles');
+    //   });
 
     // emptyCart: function() {
     //   axios.get("/api/carted_puzzles").then(response => {
