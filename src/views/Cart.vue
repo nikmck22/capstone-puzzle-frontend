@@ -1,12 +1,9 @@
 <template>
   <div class="carted_puzzles">
-    <!-- <h1>{{ message }}</h1> -->
     <div v-bind:key="carted_puzzle.id" v-for="carted_puzzle in carted_puzzles">
         <p>Id#: {{carted_puzzle.id}} - PuzzleId: {{ carted_puzzle.puzzle_id }} {{ carted_puzzle.puzzle }}</p>
-        <!-- <div v-if="currentCartedPuzzle === CartedPuzzle"> -->
           <button v-on:click="orderPuzzle(carted_puzzle)">Let's Order!</button>
           <button v-on:click="removeFromCart(carted_puzzle)">Remove from Cart</button>
-        <!-- </div> -->
     </div>
     <!-- <div v-else-if="">
       <p>There are no puzzles in your cart</p>
@@ -37,13 +34,13 @@ export default {
   },
 
   // var getPuzzleInfo = function() {
-    //   return 
+  //   return 
   // };
 
   methods: {
     
     // cartInfo: function(CartedPuzzle) {
-      //   this.currentCartedPuzzle = CartedPuzzle;
+    //   this.currentCartedPuzzle = CartedPuzzle;
     // },
 
     orderPuzzle: function(carted_puzzle) {     

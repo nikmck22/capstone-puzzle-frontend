@@ -1,22 +1,5 @@
 <template>
   <div class="index">
-    <!-- <h1>{{ message }}</h1> -->
-    <!-- <div v-bind:key="puzzle.id" v-for="puzzle in puzzles">
-      <p>Id# {{puzzle.id}}</p>
-      <p>{{puzzle.name}}</p>
-      <p>{{puzzle.rating_id}}</p>
-      <p>{{puzzle.format}}</p>
-      <p>{{puzzle.pieces}}</p>
-      <p>{{puzzle.category}}</p>
-      <p>{{puzzle.description}}</p>
-      <img v-bind:src="puzzle.img_url">
-      <hr>
-
-      <router-link v-bind:to="`/puzzles/${puzzle.id}`">More details</router-link>
-  
-     
-    <!-- </div> -->
-			<!-- Features -->
 				<div id="features-wrapper">
 					<div class="container">
 						<div class="row">
