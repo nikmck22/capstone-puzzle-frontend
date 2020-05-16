@@ -1,15 +1,13 @@
 <template>
-  <div class="show">
-    <!-- <h1>{{ message }}</h1> -->
+  <div style="padding-left: 50px;" class="show">
     <h4>Id# {{puzzle.id}}</h4>
     <img v-bind:src="puzzle.img_url">
-    <h3>{{ puzzle.name }}</h3>
-    <p>{{puzzle.rating_id}}</p>
-    <p>{{puzzle.format}}</p>
-    <p>{{puzzle.pieces}}</p>
-    <p>{{puzzle.category}}</p>
-    <p>{{puzzle.description}}</p>
-    <p>{{puzzle.rating_number}}</p>
+    <h3>Name: {{ puzzle.name }}</h3>
+    <p>Format: {{puzzle.format}}</p>
+    <p>Number of Pieces: {{puzzle.pieces}}</p>
+    <p>Category: {{puzzle.category}}</p>
+    <p>Description: {{puzzle.description}}</p>
+    <p>Avg. Rating: {{puzzle.rating_number}}</p>
     <button v-on:click="addToCart()">Add to Cart</button>
       <Rating :grade="theRating" :maxStars="5" :hasCounter="true" v-on:selectStars="selectStars" />
       <!-- <form v-on:submit.prevent="submit()">
@@ -43,6 +41,9 @@
 </template>
 
 <style>
+ #show {
+	padding-left: 30px;
+}
 </style>
 
 <script>
