@@ -37,13 +37,13 @@ export default {
   },
 
   // var getPuzzleInfo = function() {
-    //   return 
+  //   return 
   // };
 
   methods: {
     
     // cartInfo: function(CartedPuzzle) {
-      //   this.currentCartedPuzzle = CartedPuzzle;
+    //   this.currentCartedPuzzle = CartedPuzzle;
     // },
 
     orderPuzzle: function(carted_puzzle) {     
