@@ -3,7 +3,7 @@
     <!-- <h1>{{ message }}</h1> -->
     <div v-bind:key="order.id" v-for="order in orders">
         <p>Order Number: {{order.id}}</p>
-        <p>Puzzle Information: {{order.puzzle_id}} {{ order.puzzle }}</p>
+        <p>Puzzle Information: {{ order.puzzle_id }} {{ order.puzzle }}</p>
     </div>
   </div>
 </template>
