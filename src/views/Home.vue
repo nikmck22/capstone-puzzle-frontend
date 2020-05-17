@@ -1,34 +1,22 @@
 <template>
-  <div class="index">
-		<div id="features-wrapper">
-			<div class="container">
-				<div class="row">
-					<div class="col-4 col-12-medium" v-for="puzzle in puzzles">
-
-						<!-- Box -->
-							<section class="box feature">
-								<!-- <div> -->
-									<a v-bind:href="`/puzzles/{$puzzle.id}`" class="image featured"><img v-bind:src="puzzle.img_url" alt="" /></a>
-									<div class="inner">
-										<header>
-											<h2>{{ puzzle.name }}</h2>
-											<p>{{ puzzle.category }}</p>
-										</header>
-										<p>{{ puzzle.description }}</p>
-										<router-link v-bind:to="`/puzzles/${puzzle.id}`">More details</router-link>
-									<!-- </div> -->
-								</div>
-							</section>
-
+  	<div id="banner-wrapper">
+					<div id="banner" class="box container">
+						<div class="row">
+							<div class="col-7 col-12-medium">
+								<h2>Welcome to Rent.js</h2>
+								<p>This is where puzzlers come to rent jigsaw puzzles!</p>
+							</div>
+							<div class="col-5 col-12-medium">
+								<ul>
+									<li><router-link to="/login" class="button large icon solid fa-arrow-circle-right">Login</router-link></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-  </div>
 </template>
 
 <style>
-
 </style>
 
 <script>

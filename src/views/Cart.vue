@@ -1,14 +1,10 @@
 <template>
   <div class="carted_puzzles">
     <div v-bind:key="carted_puzzle.id" v-for="carted_puzzle in carted_puzzles">
-        <p>Id#: {{carted_puzzle.id}} - PuzzleId: {{ carted_puzzle.puzzle_id }} {{ carted_puzzle.puzzle }}</p>
+        <p>Id#: {{carted_puzzle.id}} - PuzzleId: {{ carted_puzzle.puzzle_id }} - {{ carted_puzzle.puzzle.name }}</p>
           <button v-on:click="orderPuzzle(carted_puzzle)">Let's Order!</button>
           <button v-on:click="removeFromCart(carted_puzzle)">Remove from Cart</button>
     </div>
-    <!-- <div v-else-if="">
-      <p>There are no puzzles in your cart</p>
-    </div> -->
-
   </div>
 </template>
 
