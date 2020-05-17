@@ -4,10 +4,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-4 col-12-medium" v-for="puzzle in puzzles">
-
-						<!-- Box -->
 							<section class="box feature">
-								<!-- <div> -->
 									<router-link v-bind:to="`/puzzles/${puzzle.id}`" class="image featured">
 									<img v-bind:src="puzzle.img_url" alt="" height="300px" /></router-link>
 									<div class="inner">
@@ -15,10 +12,8 @@
 											<h2>{{ puzzle.name }}</h2>
 											<p>{{ puzzle.category }}</p>
 										</header>
-									
-										<router-link v-bind:to="`/puzzles/${puzzle.id}`">More details</router-link>
-									<!-- </div> -->
-								</div>
+											<router-link v-bind:to="`/puzzles/${puzzle.id}`">More details</router-link>
+									</div>
 							</section>
 
 					</div>
@@ -61,42 +56,6 @@
 					border-bottom-left-radius: 0;
 					border-bottom-right-radius: 0;
 				}
-
-/* 
-.image {
-  display: block;
-	width: 100%;
-	outline: 0;
-	height: auto;
-	margin: 0 0 2.5em 0;
-}
-
-.image.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
-}
-
-.container:hover .image.overlay {
-  opacity: 1;
-}
-
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-} */
 
 </style>
 

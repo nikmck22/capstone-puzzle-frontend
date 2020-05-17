@@ -1,27 +1,29 @@
 <template>
   <div id="app">
-    <div id="page-wrapper">
-      <div id="logo">
-        <h1><router-link to="/puzzles">Rent.js</router-link></h1>
-        <span>Rent Jigsaws</span>
-			</div>
-      <!-- Header -->
-      <div id="header-wrapper">
-        <header id="header" class="container">
 
-          <!-- Nav -->
-            <nav id="nav">
-              <ul>
-                <li class="current"><a href="/puzzles">Home</a></li>
-                <li><router-link to="/carted_puzzles">Cart</router-link></li>
-                <li><router-link to="/orders">My Orders</router-link></li>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/logout">Logout</a></li>
-              </ul>
-            </nav>
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
 
-        </header>
-      </div>
+						<!-- Logo -->
+							<div id="logo">
+								<h1><router-link to="/puzzles">Rent.js</router-link></h1>
+								<span>The place to Rent Jigsaw puzzles</span>
+							</div>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li class="current"><router-link to="/puzzles">Puzzle Catalog</router-link></li>
+									<li><router-link to="/carted_puzzles">Cart</router-link></li>
+									<li><router-link to="/orders">My Orders</router-link></li>
+									<li><router-link to="/login">Login</router-link></li>
+                  <li><router-link to="/logout">Logout</router-link></li>
+								</ul>
+							</nav>
+
+					</header>
+				</div>
 
         <router-view/>
     
