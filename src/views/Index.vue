@@ -12,13 +12,13 @@
 								
     <!-- <div class="text">Hello World</div> -->
  
-									<img v-bind:src="puzzle.img_url" alt="" /></a>
+									<img v-bind:src="puzzle.img_url" alt="" height="300px" /></a>
 									<div class="inner">
 										<header>
 											<h2>{{ puzzle.name }}</h2>
 											<p>{{ puzzle.category }}</p>
 										</header>
-										<p>{{ puzzle.description }}</p>
+									
 										<router-link v-bind:to="`/puzzles/${puzzle.id}`">More details</router-link>
 									<!-- </div> -->
 								</div>
