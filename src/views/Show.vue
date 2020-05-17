@@ -1,47 +1,55 @@
 <template>
-  <div style="padding-left: 50px;" class="show">
-    <h4>Id# {{puzzle.id}}</h4>
-    <img v-bind:src="puzzle.img_url">
-    <h3>Name: {{ puzzle.name }}</h3>
-    <p>Format: {{puzzle.format}}</p>
-    <p>Number of Pieces: {{puzzle.pieces}}</p>
-    <p>Category: {{puzzle.category}}</p>
-    <p>Description: {{puzzle.description}}</p>
-    <p>Avg. Rating: {{puzzle.rating_number}}</p>
-    <button v-on:click="addToCart()">Add to Cart</button>
-    <p></p>
-    <h3>Rate this puzzle:</h3>
-      <Rating :grade="theRating" :maxStars="5" :hasCounter="true" v-on:selectStars="selectStars" />
-      <!-- <form v-on:submit.prevent="submit()">
-        <div>
-          <label>Rate this Puzzle:</label>
-          <input type="text" class="form-control" v-model="puzzle.rating_number">
+  <body class="is-preload right-sidebar">
+    <div id="page-wrapper">
+      <div id="main-wrapper">
+        <div class="container">
+          <div class="row gtr-200">
+            <div class="col-8 col-12-medium">
+              <div id="content">
+                <div style="padding-left: 50px;" class="show">
+                  <article>
+                    <h4>{{puzzle.id}}</h4>
+                    <h2>{{ puzzle.name }}</h2>
+                    <img v-bind:src="puzzle.img_url">
+                  </article>
+
+                    <div class="col-4 col-12-medium">
+                      <div id="sidebar">
+                        <section>
+                          <h3>Puzzle description</h3>
+                          <p>{{puzzle.description}}</p>
+                          <footer>
+                            <button v-on:click="addToCart()">Add to Cart</button>
+                            <h3>Rate this puzzle:</h3>
+                            <Rating :grade="theRating" :maxStars="5" :hasCounter="true" v-on:selectStars="selectStars" />
+                          </footer>
+                        </section>
+
+                        <section>
+                          <h3>More details</h3>
+                          <ul class="style2">
+                            <li>Format: {{puzzle.format}}</li>
+                            <li>Number of Pieces: {{puzzle.pieces}}</li>
+                            <li>Category: {{puzzle.category}}</li>
+                            <li>Avg. Rating: {{puzzle.rating_number}}</li>
+                          </ul>
+                        </section>
+
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-          <input type="submit" class="btn btn-primary" value="Submit">
-      </form> -->
-      <br>
-      <!-- <router-link v-bind:to="`/puzzles/${puzzle.id}`">Add to Cart</router-link> -->
-      
-
-<!--RATING-->
-  <!-- <div class="rating">
-    <ul class="list">
-      <li @click="rate(star)" v-for="star in maxStars" :class="{ 'active': star <= stars }" :key="star.stars" class="star">
-      <i :class="star <= stars ? 'fas fa-star' : 'far fa-star'"></i> 
-      </li>
-    </ul>
-    <div v-if="hasCounter" class="info counter">
-      <span class="score-rating">{{ stars }}</span>
-      <span class="divider">/</span>
-      <span class="score-max">{{ maxStars }}</span>
+      </div>
     </div>
-  </div> -->
-
-
-      <hr>
-  </div>
+  </body>
 </template>
 
+
+
+		
 <style>
  #show {
 	padding-left: 30px;

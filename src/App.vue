@@ -24,12 +24,23 @@
       </div>
 
         <router-view/>
-        <!-- STAR RATINGS -->
-      <!-- <Rating :grade="3" :maxStars="5" :hasCounter="true" /> -->
+     
 
 	<div id="banner-wrapper">
 					<div id="footer" class="box container">
 						<div class="row">
+              	<section class="widget links">
+										<h3>Welcome page</h3>
+										<ul class="style2">
+											<li><router-link to="/">Click here!</router-link></li>
+										</ul>
+									</section>
+                  	<section class="widget links">
+										<h3>Puzzle catalog</h3>
+										<ul class="style2">
+											<li><router-link to="/puzzles">Click here!</router-link></li>
+										</ul>
+									</section>
 							<div class="col-7 col-12-medium">
 								<h3>Contact Us</h3>
 								<p>1234 Fictional Road<br />
@@ -49,13 +60,36 @@
             </div>
           </div>
       </div>
-
     </div>
 </template>
 
 <style>
 @import '/styles/global.scss';
+	#logo {
+		display: inline-block;
+	}
 
+		#logo h1 {
+			background: #10a0d5;
+			color: #fff;
+			border-radius: 6px;
+			font-family: 'Oleo Script', serif;
+			font-weight: 400;
+			padding: 0.25em 0.2em 0.25em 0.2em;
+			font-size: 3.25em;
+			letter-spacing: 0.05em;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		#logo span {
+			font-weight: 800;
+			line-height: 4.5em;
+			letter-spacing: 0.025em;
+			font-size: 0.9em;
+			vertical-align: middle;
+			margin: 0 0 0 1.25em;
+		}
 
 </style>
 
