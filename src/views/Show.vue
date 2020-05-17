@@ -26,7 +26,7 @@
 											<h3>Rate this puzzle</h3>
 											<p><Rating :grade="theRating" :maxStars="5" :hasCounter="true" v-on:selectStars="selectStars" /></p>
 											<footer>
-												<button v-on:click="addToCart()">Add to Cart</button>
+												<button v-on:click="addToCart()">Add this Puzzle to My Cart!</button>
 											</footer>
 										</section>
 
