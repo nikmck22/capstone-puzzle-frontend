@@ -9,6 +9,8 @@
     <p>Description: {{puzzle.description}}</p>
     <p>Avg. Rating: {{puzzle.rating_number}}</p>
     <button v-on:click="addToCart()">Add to Cart</button>
+    <p></p>
+    <h3>Rate this puzzle:</h3>
       <Rating :grade="theRating" :maxStars="5" :hasCounter="true" v-on:selectStars="selectStars" />
       <!-- <form v-on:submit.prevent="submit()">
         <div>
@@ -55,7 +57,7 @@ export default {
   data: function() {
     return {
       puzzle: {},
-      theRating: 2
+      theRating: 1
     };
   },
   created: function() {
@@ -95,15 +97,41 @@ export default {
 
     },
 
-    ratePuzzle: function() {
-      axios.post("/api/puzzle_ratings").then(response => {
-        console.log(response.data);
-      });
-    },
+    // ratePuzzle: function() {
+    //   axios.post("/api/puzzle_ratings").then(response => {
+    //     console.log(response.data);
+    //   });
+    // },
 
     selectStars: function(stars) {
       this.puzzle.rating_number = stars;
-    }
+      var params = {
+        rating_number: this.puzzle.rating_number,
+        puzzle_id: this.puzzle.id,
+      };
+      axios.post("/api/puzzle_ratings", params).then(response => {
+        console.log(response.data);
+        console.log('this puzzle has been rated');
+      });
+      var params = {
+        rating_number: this.puzzle.rating_number
+      };
+      axios.patch(`/api/puzzles/${this.puzzle.id}`, params).then(response => {
+        console.log(response.data);
+        console.log('average rating');
+      });
+    },
+
+    // ratePuzzle: function(stars) {
+    //   this.puzzle.rating_number = stars;
+    //   var params = {
+    //     rating_number: this.puzzle.rating_number
+    //   };
+    //   axios.patch(`/api/puzzles/${this.puzzle.id}`, params).then(response => {
+    //     console.log(response.data);
+    //     console.log('average rating');
+    //   });
+    // }
 
     // submit: function() {
     //   var params = {
