@@ -9,7 +9,7 @@
 
 											<h2>{{ puzzle.name }}</h2>
 
-                        <img v-bind:src="puzzle.img_url">
+                        <img v-bind:src="puzzle.img_url" height="300px">
 
 											<h3>Puzzle Description</h3>
                         <p>{{puzzle.description}}</p>
@@ -23,7 +23,7 @@
 
 									<!-- Sidebar -->
 										<section>
-											<h3>Rate the puzzle</h3>
+											<h3>Rate this puzzle</h3>
 											<p><Rating :grade="theRating" :maxStars="5" :hasCounter="true" v-on:selectStars="selectStars" /></p>
 											<footer>
 												<button v-on:click="addToCart()">Add to Cart</button>
