@@ -8,11 +8,8 @@
 						<!-- Box -->
 							<section class="box feature">
 								<!-- <div> -->
-									<a v-bind:href="`/puzzles/{$puzzle.id}`" class="image featured">
-								
-    <!-- <div class="text">Hello World</div> -->
- 
-									<img v-bind:src="puzzle.img_url" alt="" height="300px" /></a>
+									<router-link v-bind:to="`/puzzles/${puzzle.id}`" class="image featured">
+									<img v-bind:src="puzzle.img_url" alt="" height="300px" /></router-link>
 									<div class="inner">
 										<header>
 											<h2>{{ puzzle.name }}</h2>

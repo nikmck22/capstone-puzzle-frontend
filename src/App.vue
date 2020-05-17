@@ -24,36 +24,12 @@
       </div>
 
         <router-view/>
-     
-
-	<div id="banner-wrapper">
-					<div id="footer" class="box container">
-						<div class="row">
-              	<section class="widget links">
-										<h3>Welcome page</h3>
-										<ul class="style2">
-											<li><router-link to="/">Click here!</router-link></li>
-										</ul>
-									</section>
-                  	<section class="widget links">
-										<h3>Puzzle catalog</h3>
-										<ul class="style2">
-											<li><router-link to="/puzzles">Click here!</router-link></li>
-										</ul>
-									</section>
-							<div class="col-7 col-12-medium">
-								<h3>Contact Us</h3>
-								<p>1234 Fictional Road<br />
-                  Nashville, TN 00000<br />
-                  (800) 555-0000</p>
-							</div>
-						</div>
-					</div>
-				</div>
+    
         <div class="row">
             <div class="col-12">
               <div id="copyright">
                 <ul class="menu">
+                  <li>Contact Us: email@puzzles.com</li>
                   <li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">by Nikki</a></li>
                 </ul>
               </div>
