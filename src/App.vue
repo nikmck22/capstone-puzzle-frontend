@@ -8,7 +8,7 @@
 						<!-- Logo -->
 							<div id="logo">
 								<h1><router-link to="/puzzles">Rent.js</router-link></h1>
-								<span>The place to Rent Jigsaw puzzles</span>
+                <p>A place to Rent Jigsaw puzzles</p>
 							</div>
 
 						<!-- Nav -->
@@ -78,14 +78,9 @@ import Rating from './components/Rating.vue';
 export default {
   data: function() {
     return {
-      titleFilter: ""
+      categoryFilter: ""
     };
   },
-
-  // name: 'App',
-  // components: {
-  //   Rating
-  // },
 
   beforeCreate: function() {
     document.body.className = 'home';

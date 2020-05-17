@@ -1,10 +1,19 @@
 <template>
-   <div class="carted_puzzles">
-    <div v-bind:key="carted_puzzle.id" v-for="carted_puzzle in carted_puzzles">
-        <p>Id#: {{carted_puzzle.id}} - PuzzleId: {{ carted_puzzle.puzzle_id }} {{ carted_puzzle.puzzle }}</p>
-        <p>Id#: {{carted_puzzle.id}} - PuzzleId: {{ carted_puzzle.puzzle_id }} - {{ carted_puzzle.puzzle.name }}</p>
-          <button v-on:click="orderPuzzle(carted_puzzle)">Let's Order!</button>
-          <button v-on:click="removeFromCart(carted_puzzle)">Remove from Cart</button>
+  <div id="main-wrapper">
+    <div class="container">
+      <div id="content">
+        <article>
+          <h2>Here is your cart - ready to order?</h2>
+
+            <div v-bind:key="carted_puzzle.id" v-for="carted_puzzle in carted_puzzles">
+              <p>Id#: {{carted_puzzle.id}} - PuzzleId: {{ carted_puzzle.puzzle_id }} {{ carted_puzzle.puzzle }}</p>
+              <p>Id#: {{carted_puzzle.id}} - PuzzleId: {{ carted_puzzle.puzzle_id }} - {{ carted_puzzle.puzzle.name }}</p>
+                <button v-on:click="orderPuzzle(carted_puzzle)">Let's Order!</button>
+                <button v-on:click="removeFromCart(carted_puzzle)">Remove from Cart</button>
+            </div>
+
+        </article>
+      </div>
     </div>
   </div>
 </template>

@@ -2,7 +2,7 @@
 				<div id="main-wrapper">
 					<div class="container">
 						<div class="row gtr-400">
-							<div class="col-6 col-12-large">
+							<div class="col-12 col-12-large">
 
 								<!-- Sidebar -->
 									<div id="sidebar">
@@ -10,7 +10,7 @@
 											<h3>My Recent Puzzle Orders</h3>
 											<div class="grid">
 												<div class="row gtr-50">
-													<div class="col-6" v-bind:key="order.id" v-for="order in orders"><p class="image fit">Order# {{order.id}} - {{order.puzzle.name}}<img v-bind:src="order.puzzle.img_url" alt="" /></p></div>
+													<div class="col-6" v-bind:key="order.id" v-for="order in orders"><p class="image fit">Order# {{order.id}} - {{order.puzzle.name}}<img v-bind:src="order.puzzle.img_url" alt="" height="400px" /></p></div>
 												</div>
 											</div>
 											<a href="/puzzles" class="button icon fa-file-alt">Let's order MORE!</a>

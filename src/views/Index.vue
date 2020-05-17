@@ -2,16 +2,16 @@
   <div class="index">
 		<div id="features-wrapper">
 			<div class="container">
-					<input type="text" v-model="categoryFilter" list="categories">
+					<!-- <input type="text" list="categories">
 					<datalist id="categories">
 						<option>Animals</option>
 						<option>Art</option>
 						<option>Food</option>
 						<option>Holidays</option>
 						<option>Scenery</option>
-					</datalist>
+					</datalist> -->
 				<div class="row">
-					<div class="col-4 col-12-medium" v-for="puzzle in filterBy(puzzles, categoryFilter, 'category')">
+					<div class="col-4 col-12-medium" v-for="puzzle in filterBy(puzzles, $parent.categoryFilter, 'category')">
 							<section class="box feature">
 									<router-link v-bind:to="`/puzzles/${puzzle.id}`" class="image featured">
 									<img v-bind:src="puzzle.img_url" alt="" height="300px" /></router-link>
