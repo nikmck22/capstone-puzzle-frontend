@@ -86,16 +86,6 @@ export default {
     Rating
   },
 
-  // name: 'Rating',
-  // props: ['grade', 'maxStars', 'hasCounter'],
-
-  // data() {
-  //   return {
-  //     stars: this.grade
-  //   };
-  // },
-
-
   methods: {
 
     addToCart: function() {
@@ -110,12 +100,6 @@ export default {
       });
 
     },
-
-    // ratePuzzle: function() {
-    //   axios.post("/api/puzzle_ratings").then(response => {
-    //     console.log(response.data);
-    //   });
-    // },
 
     selectStars: function(stars) {
       this.puzzle.rating_number = stars;
@@ -135,32 +119,6 @@ export default {
         console.log('average rating');
       });
     },
-
-    // ratePuzzle: function(stars) {
-    //   this.puzzle.rating_number = stars;
-    //   var params = {
-    //     rating_number: this.puzzle.rating_number
-    //   };
-    //   axios.patch(`/api/puzzles/${this.puzzle.id}`, params).then(response => {
-    //     console.log(response.data);
-    //     console.log('average rating');
-    //   });
-    // }
-
-    // submit: function() {
-    //   var params = {
-    //     rating_number: this.puzzle.rating_number
-    //   };
-    //   axios.patch(`/api/puzzles/${this.puzzle.id}`, params).then(response => {
-    //     console.log(response.data);
-    //   });
-    // }
-    
-    // rate(star) {
-    //   if (typeof star === 'number' && star <= this.maxStars && star >= 0) {
-    //     this.stars = this.stars === star ? star - 1 : star
-    //   }
-    // }
   }
 };
 </script>
