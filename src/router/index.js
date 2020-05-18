@@ -7,6 +7,7 @@ import Index from '../views/Index.vue';
 import Show from '../views/Show.vue';
 import Cart from '../views/Cart.vue';
 import Orders from '../views/Orders.vue';
+import Users from '../views/Users.vue';
 
 Vue.use(VueRouter)
 
@@ -45,6 +46,11 @@ Vue.use(VueRouter)
     path: '/orders',
     name: 'orders',
     component: Orders
+  },
+  {
+    path: '/users/:id',
+    name: 'users',
+    component: Users
   },
   {
     path: '/about',
