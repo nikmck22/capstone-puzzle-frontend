@@ -17,9 +17,9 @@
 									<li class="current"><router-link to="/puzzles">Puzzle Catalog</router-link></li>
 									<li><router-link to="/carted_puzzles">Cart</router-link></li>
 									<li><router-link to="/orders">My Orders</router-link></li>
+                  <li><router-link to="/users/:id">User Dashboard</router-link></li>
 									<li><router-link to="/login">Login</router-link></li>
                   <li><router-link to="/logout">Logout</router-link></li>
-                  <li><router-link to="/users/:id">DASHBOARD</router-link></li>
 								</ul>
 							</nav>
 
