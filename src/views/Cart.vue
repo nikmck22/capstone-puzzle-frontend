@@ -3,22 +3,27 @@
     <div class="container">
       <div id="content">
         <article>
-          <h2>Here is your cart - ready to order?</h2>
-
-            <div v-bind:key="carted_puzzle.id" v-for="carted_puzzle in carted_puzzles">
-              <p>Id#: {{carted_puzzle.id}} - PuzzleId: {{ carted_puzzle.puzzle_id }} {{ carted_puzzle.puzzle }}</p>
-              <p>Id#: {{carted_puzzle.id}} - PuzzleId: {{ carted_puzzle.puzzle_id }} - {{ carted_puzzle.puzzle.name }}</p>
+              <div v-bind:key="carted_puzzle.id" v-for="carted_puzzle in carted_puzzles">
+                <h3>{{carted_puzzle.puzzle.name}}</h3>
+                  <p>Puzzle ID# {{carted_puzzle.puzzle.id}}</p>
+                  <img v-bind:src="carted_puzzle.puzzle.img_url" alt="" height="200px" />
+                  <p>Format: {{carted_puzzle.puzzle.format}} || 
+                  Number of Pieces: {{carted_puzzle.puzzle.pieces}} ||
+                  Category: {{carted_puzzle.puzzle.category}} ||
+                  Avg. Rating: {{carted_puzzle.puzzle.rating_number}}</p>
                 <button v-on:click="orderPuzzle(carted_puzzle)">Let's Order!</button>
                 <button v-on:click="removeFromCart(carted_puzzle)">Remove from Cart</button>
-            </div>
-
+              </div>
         </article>
       </div>
     </div>
   </div>
 </template>
 
+
+
 <style>
+
 </style>
 
 <script>
