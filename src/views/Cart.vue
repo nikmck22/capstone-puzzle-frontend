@@ -6,8 +6,9 @@
           <h2>Here is your cart - ready to order?</h2>
 
             <div v-bind:key="carted_puzzle.id" v-for="carted_puzzle in carted_puzzles">
-              <p>Id#: {{carted_puzzle.id}} - PuzzleId: {{ carted_puzzle.puzzle_id }} {{ carted_puzzle.puzzle }}</p>
-              <p>Id#: {{carted_puzzle.id}} - PuzzleId: {{ carted_puzzle.puzzle_id }} - {{ carted_puzzle.puzzle.name }}</p>
+              <p>Id# {{ carted_puzzle.puzzle_id }}</p>
+              <img v-bind:src="carted_puzzle.puzzle.img_url" height="200px">
+              <p>Puzzle Name: {{ carted_puzzle.puzzle.name }} || Number of Pieces: {{carted_puzzle.puzzle.pieces}} || Format: {{carted_puzzle.puzzle.format}} || Category: {{carted_puzzle.puzzle.category}}</p>
                 <button v-on:click="orderPuzzle(carted_puzzle)">Let's Order!</button>
                 <button v-on:click="removeFromCart(carted_puzzle)">Remove from Cart</button>
             </div>
