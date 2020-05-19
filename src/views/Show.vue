@@ -24,6 +24,7 @@
 									<!-- Sidebar -->
 										<section>
 											<h3>Rate this puzzle</h3>
+                      <p>Avg. Rating: {{puzzle.rating_number}}</p>
 											<p><Rating :grade="theRating" :maxStars="5" :hasCounter="true" v-on:selectStars="selectStars" /></p>
 											<footer>
 												<button v-on:click="addToCart()">Add this Puzzle to My Cart!</button>
@@ -36,7 +37,6 @@
 												<li>Format: {{puzzle.format}}</li>
                         <li>Number of Pieces: {{puzzle.pieces}}</li>
                         <li>Category: {{puzzle.category}}</li>
-                        <li>Avg. Rating: {{puzzle.rating_number}}</li>
                         <li>Puzzle ID# {{puzzle.id}}</li>
 											</ul>
 										</section>

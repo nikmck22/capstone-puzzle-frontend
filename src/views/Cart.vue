@@ -55,7 +55,7 @@ export default {
       };
       console.log('trying to order');
       // console.log(carted_puzzle);
-      console.log(carted_puzzle.puzzle.id)
+      console.log(carted_puzzle.puzzle.id);
       axios.post("/api/orders", params).then(response => {
         console.log('puzzle order complete');
         console.log(response.data);

@@ -83,9 +83,12 @@
 
 <script>
 import Rating from './components/Rating.vue';
+import Vue2Filters from "vue2-filters";
+
 
 
 export default {
+  mixins: [Vue2Filters.mixin],
   data: function() {
     return {
       categoryFilter: ""

@@ -62,15 +62,15 @@
 </style>
 
 <script>
-import Vue2Filters from "vue2-filters"
+import Vue2Filters from "vue2-filters";
 import axios from "axios";
 
 export default {
-	mixins: [Vue2Filters.mixin],
+  mixins: [Vue2Filters.mixin],
   data: function() {
     return {
-			puzzles: [],
-			categoryFilter: ''
+      puzzles: [],
+      categoryFilter: ''
     };
   },
   created: function() {
