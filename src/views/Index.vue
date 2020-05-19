@@ -2,14 +2,7 @@
   <div class="index">
 		<div id="features-wrapper">
 			<div class="container">
-					<!-- <input type="text" list="categories">
-					<datalist id="categories">
-						<option>Animals</option>
-						<option>Art</option>
-						<option>Food</option>
-						<option>Holidays</option>
-						<option>Scenery</option>
-					</datalist> -->
+				
 				<div class="row">
 					<div class="col-4 col-12-medium" v-for="puzzle in filterBy(puzzles, $parent.categoryFilter, 'category')">
 							<section class="box feature">
@@ -32,6 +25,7 @@
 </template>
 
 <style>
+
 	.box {
 		background: #fff;
 		border-radius: 6px;

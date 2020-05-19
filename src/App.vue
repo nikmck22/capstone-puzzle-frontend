@@ -25,8 +25,16 @@
 
 					</header>
 				</div>
+          <input type="text" list="categories" v-model="categoryFilter">
+            <datalist id="categories">
+              <option>Animals</option>
+              <option>Art</option>
+              <option>Food</option>
+              <option>Holidays</option>
+              <option>Scenery</option>
+            </datalist>
 
-        <router-view/>
+          <router-view/>
     
         <div class="row">
             <div class="col-12">

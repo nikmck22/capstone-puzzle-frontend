@@ -10,7 +10,6 @@
               <img v-bind:src="carted_puzzle.puzzle.img_url" height="200px">
               <p>Puzzle Name: {{ carted_puzzle.puzzle.name }} || Number of Pieces: {{carted_puzzle.puzzle.pieces}} || Format: {{carted_puzzle.puzzle.format}} || Category: {{carted_puzzle.puzzle.category}}</p>
                 <button v-on:click="orderPuzzle(carted_puzzle)">Let's Order!</button>
-                <button v-on:click="removeFromCart(carted_puzzle)">Remove from Cart</button>
             </div>
 
         </article>
