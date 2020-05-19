@@ -1,53 +1,54 @@
 <template>
   <div id="app">
 
-			<!-- Header -->
-				<div id="header-wrapper">
-					<header id="header" class="container">
+    <!-- Header -->
+    <div id="header-wrapper">
+      <header id="header" class="container">
 
-						<!-- Logo -->
-							<div id="logo">
-								<h1><router-link to="/puzzles">Rent.js</router-link></h1>
-                <p>A place to Rent Jigsaw puzzles</p>
-							</div>
+          <!-- Logo -->
+        <div id="logo">
+          <h1><router-link to="/puzzles">Rent.js</router-link></h1>
+          <p>A place to Rent Jigsaw puzzles</p>
+        </div>
 
-						<!-- Nav -->
-							<nav id="nav">
-								<ul>
-									<li class="current"><router-link to="/puzzles">Puzzle Catalog</router-link></li>
-									<li><router-link to="/carted_puzzles">Cart</router-link></li>
-									<li><router-link to="/orders">My Orders</router-link></li>
-                  <li><router-link to="/users/:id">User Dashboard</router-link></li>
-									<li><router-link to="/login">Login</router-link></li>
-                  <li><router-link to="/logout">Logout</router-link></li>
-								</ul>
-							</nav>
+        <!-- Nav -->
+        <nav id="nav">
+          <ul>
+            <li class="current"><router-link to="/puzzles">Puzzle Catalog</router-link></li>
+            <li><router-link to="/carted_puzzles">Cart</router-link></li>
+            <li><router-link to="/orders">My Orders</router-link></li>
+            <li><router-link to="/users/:id">User Dashboard</router-link></li>
+            <li><router-link to="/login">Login</router-link></li>
+            <li><router-link to="/logout">Logout</router-link></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
 
-					</header>
-				</div>
-          <input type="text" list="categories" v-model="categoryFilter">
-            <datalist id="categories">
-              <option>Animals</option>
-              <option>Art</option>
-              <option>Food</option>
-              <option>Holidays</option>
-              <option>Scenery</option>
-            </datalist>
-
-          <router-view/>
+    <!-- <div v-if="$router.name === 'index'">
+      <input type="text" list="categories" v-model="categoryFilter">
+        <datalist id="categories">
+          <option>Animals</option>
+          <option>Art</option>
+          <option>Food</option>
+          <option>Holidays</option>
+          <option>Scenery</option>
+        </datalist>
+    </div> -->
     
-        <div class="row">
-            <div class="col-12">
-              <div id="copyright">
-                <ul class="menu">
-                  <li>Contact Us: email@puzzles.com</li>
-                  <li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">by Nikki</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+    <router-view/>
+
+    <div class="row">
+      <div class="col-12">
+        <div id="copyright">
+          <ul class="menu">
+            <li>Contact Us: email@puzzles.com</li>
+            <li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">by Nikki</a></li>
+          </ul>
+        </div>
       </div>
     </div>
+  </div>
 </template>
 
 <style>
